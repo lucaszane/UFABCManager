@@ -1,4 +1,4 @@
-package ufabcmanager;
+package JogoFSM;
 
 import jade.core.Profile;
 import jade.core.ProfileImpl;
@@ -6,11 +6,8 @@ import jade.wrapper.AgentController;
 import jade.wrapper.ContainerController;
 import jade.wrapper.StaleProxyException;
 
-/**
- *
- * @author b.borghese
- */
-public class UFABCManager {
+public class CriarAgenteComportamentoFSM 
+{
     static ContainerController containerController;
     static AgentController agentController;
 
@@ -21,7 +18,7 @@ public class UFABCManager {
         startMainContainer("127.0.0.1", Profile.LOCAL_PORT, "UFABC");
         //adicionando agente
         //SINTAXE: addAgent(container, nome_do_agente, classe, parametros de inicializacao)
-        addAgent(containerController, "Container", AgenteTeste.class.getName(), null );
+        addAgent(containerController, "Graca", PersonagemFSM.class.getName(), null );
 
         //adicionando agente RMA
         //addAgent(containerController, "rma", "jade.tools.rma.rma", null);
